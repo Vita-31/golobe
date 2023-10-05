@@ -1,0 +1,14 @@
+@import 'akar-icons-fonts/src/css/akar-icons.css';
+@import './tailwind';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font:
+    400 1rem/1.5 'Montserrat',
+    sans-serif;
+}
