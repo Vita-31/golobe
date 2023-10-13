@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Routes, Route } from "react-router-dom";
-import { Header } from './features/Header';
+import { Header } from './features/Header/Header';
 import { Footer } from './features/Footer';
 import { Home } from './pages/home/Home';
 

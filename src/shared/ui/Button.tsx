@@ -1,7 +1,7 @@
+import { FC } from 'react';
 
-
-export const Button = () => {
+export const Button: FC = () => {
   return (
-    <div>Button</div>
+    <button></button>
   )
 }

@@ -1,0 +1,45 @@
+.burger {
+  span {
+    &:first-child {
+      animation: burger-first-default .4s forwards;
+    }
+  
+    &:last-child {
+      animation: burger-second-default .4s forwards;
+    }
+  }
+}
+
+@keyframes burger-first-default {
+  0% {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  50% {
+    top: 50%;
+    transform: translateY(-50%) rotate(0);
+  }
+
+  100% {
+    top: 25%;
+    transform: translateY(0) rotate(0);
+  }
+}
+  
+@keyframes burger-second-default {
+  0% {
+    bottom: 50%;
+    transform: translateY(50%)rotate(-45deg);
+  }
+
+  50% {
+    bottom: 50%;
+    transform: translateY(50%)rotate(0);
+  }
+
+  100% {
+    bottom: 25%;
+    transform: translateY(0) rotate(0);
+  }
+}
