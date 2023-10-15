@@ -5,6 +5,7 @@
 
 // helpers
 @import './helpers/colors';
+@import './helpers/breakpoints';
 
 // base
 @import './base/base';
@@ -12,6 +13,7 @@
 // parts
 @import './parts/link';
 @import './parts/burger';
+@import './parts/footer-container';
 
 // components
 @import './components/header';

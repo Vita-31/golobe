@@ -28,6 +28,10 @@ body {
   flex-direction: column;
 }
 
+main {
+  height: 100%;
+}
+
 svg path {
   fill: currentColor;
 }

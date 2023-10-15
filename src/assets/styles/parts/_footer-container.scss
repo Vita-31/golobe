@@ -1,0 +1,8 @@
+.footer-container {
+  grid-template-columns: 1fr;
+
+  @media(min-width: 1280px) {
+    grid-template-columns: max-content 975px;
+    grid-template-rows: 40px 24px 1fr;  
+  }
+}

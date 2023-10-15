@@ -12,7 +12,7 @@ export const Header: FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={`header fixed top-0 inset-x-0 ${open ? 'open' : ''}`}>
+    <header className={`header fixed top-0 inset-x-0 bg-white z-10 ${open ? 'open' : ''}`}>
       <nav className='flex items-center gap-3 container py-4 md:py-5 md:justify-between'>
 
         <ul className='nav fixed left-4 right-4 top-32 opacity-0 bg-white items-center gap-8 flex p-10 rounded-md pointer-events-none duration-500 md:static md:opacity-100 md:pointer-events-auto md:shadow-none md:p-0'>

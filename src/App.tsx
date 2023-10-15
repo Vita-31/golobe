@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Routes, Route } from "react-router-dom";
 import { Header } from './features/Header/Header';
-import { Footer } from './features/Footer';
+import { Footer } from './features/Footer/Footer';
 import { Home } from './pages/home/Home';
 
 export const App: FC = () => {
