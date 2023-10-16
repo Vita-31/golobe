@@ -1,24 +1,19 @@
-import { FC } from "react";
+import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import sprites from '../../../assets/img/sprites.svg';
+import sprites from '@/assets/img/sprites.svg';
+import { Link } from '../lib/constants';
 
-interface HeaderLink {
-  item: {
-    path: string,
-    icon: string,
-    name: string,
-  }
-};
-
-export const HeaderLink: FC<HeaderLink> = ({ item }) => {
+export const HeaderLink: FC<Link> = ({ path, icon, name }) => {
   return (
     <li className="w-full md:w-fit">
-      <NavLink 
-        to={item.path} 
-        className="link link--active flex items-center gap-1 text-dark text-sm leading-4 relative justify-center"
+      <NavLink
+        to={path}
+        className="link link--active relative flex items-center justify-center gap-1 py-5 text-sm leading-4 text-dark"
       >
-        <svg className="icon"><use xlinkHref={`${sprites}#${item.icon}`}></use></svg>
-        {item.name}
+        <svg className="icon">
+          <use xlinkHref={`${sprites}#${icon}`}></use>
+        </svg>
+        {name}
       </NavLink>
     </li>
   );

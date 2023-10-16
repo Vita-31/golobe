@@ -1,41 +1,53 @@
 import { FC, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import Logo from '@/assets/img/logo.svg';
+import { links } from './lib/constants';
 import { HeaderLink } from './ui/HeaderLink.tsx';
-
-import Logo from '../../assets/img/logo.svg';
-
-import { links } from './constants.ts';
 import { Burger } from './ui/Burger.tsx';
 
 export const Header: FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={`header fixed top-0 inset-x-0 bg-white z-10 ${open ? 'open' : ''}`}>
-      <nav className='flex items-center gap-3 container py-4 md:py-5 md:justify-between'>
-
-        <ul className='nav fixed left-4 right-4 top-32 opacity-0 bg-white items-center gap-8 flex p-10 rounded-md pointer-events-none duration-500 md:static md:opacity-100 md:pointer-events-auto md:shadow-none md:p-0'>
-          {links.map(link => <HeaderLink key={link.name} item={link} />)}
+    <header className={`header fixed inset-x-0 top-0 z-10 bg-white ${open ? 'open' : ''}`}>
+      <nav className="container flex items-center gap-3 py-4 md:justify-between md:py-5">
+        <ul className="nav pointer-events-none fixed left-4 right-4 top-32 flex items-center gap-8 rounded-md bg-white p-10 opacity-0 duration-500 md:pointer-events-auto md:static md:p-0 md:opacity-100 md:shadow-none">
+          {links.map((link) => (
+            <HeaderLink key={link.name} {...link} />
+          ))}
         </ul>
 
-        <NavLink to='/'>
-          <img src={Logo} className='w-24 h-9 md:w-28 object-contain' alt="Golobe" />
+        <NavLink to="/">
+          <img src={Logo} className="h-9 w-24 object-contain md:w-28" alt="Golobe" />
         </NavLink>
 
-        <div className="flex items-center gap-5 ml-auto md:m-0">
-          <NavLink to='/login' className="link font-semibold text-sm leading-4">Login</NavLink>
+        <div className="ml-auto flex items-center gap-5 md:m-0">
+          <NavLink to="/login" className="link text-sm font-semibold leading-4">
+            Login
+          </NavLink>
 
-          <NavLink 
-            to='/sign-up' 
-            className="bg-dark py-3.5 px-5 font-semibold text-sm leading-4 text-white rounded-lg 
-                       hover:bg-primary hover:text-dark duration-300
-                       md:py-4 md:px-6"
+          <NavLink
+            to="/sign-up"
+            className="
+              rounded-lg
+              bg-dark
+              px-5
+              py-3.5
+              text-sm
+              font-semibold
+              leading-4
+              text-white
+              duration-300
+              hover:bg-primary
+              hover:text-dark
+              md:px-6
+              md:py-4
+            "
           >
             Sign up
           </NavLink>
 
-          <Burger onClick={() => open ? setOpen(false) : setOpen(true)} />
+          <Burger onClick={() => setOpen((o) => !o)} />
         </div>
       </nav>
     </header>

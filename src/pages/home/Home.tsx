@@ -1,5 +1,9 @@
 import { FC } from 'react';
 
 export const Home: FC = () => {
-  return <div className="flex flex-col mt-10 container">Home page</div>;
+  return (
+    <div>
+      <div className="container mt-10 flex flex-col">Home page</div>
+    </div>
+  );
 };

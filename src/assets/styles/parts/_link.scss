@@ -1,10 +1,10 @@
 .link {
-  transition: .3s;
+  transition: 0.3s;
 
   .icon {
-    transition: .3s;
+    transition: 0.3s;
   }
-  
+
   &:hover {
     color: var(--primary);
 
@@ -19,15 +19,14 @@
       position: absolute;
       width: 75%;
       height: 5px;
-      bottom: -10px;
+      top: 100%;
       background-color: var(--primary);
       scale: 0;
       transition-property: scale;
-      transition-duration: .3s;
+      transition-duration: 0.3s;
 
-      @media(min-width: 768px) {
+      @media (min-width: 768px) {
         width: 100%;
-        bottom: -32px;
       }
     }
 
