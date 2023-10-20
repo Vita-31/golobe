@@ -19,12 +19,12 @@ export const Footer: FC = () => {
         </NavLink>
 
         <div className="grid w-full gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-6 lg:grid-cols-5 xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-4">
-          {footerNav.map((nav) => (
-            <div className="flex flex-col gap-4">
+          {footerNav.map((nav, idx) => (
+            <div className="flex flex-col gap-4" key={idx}>
               <h2 className="text-base font-semibold leading-5">{nav.title}</h2>
               <ul className="flex flex-col gap-3.5">
-                {nav.links.map((link) => (
-                  <li className="leading-4">
+                {nav.links.map((link, idx) => (
+                  <li className="leading-4" key={idx}>
                     <NavLink to={link.link} className="flex font-medium leading-4 opacity-70">
                       {link.title}
                     </NavLink>

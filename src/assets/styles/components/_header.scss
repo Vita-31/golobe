@@ -3,11 +3,11 @@
     .burger {
       span {
         &:first-child {
-          animation: burger-first-open .4s forwards;
+          animation: burger-first-open 0.4s forwards;
         }
 
         &:last-child {
-          animation: burger-second-open .4s forwards;
+          animation: burger-second-open 0.4s forwards;
         }
       }
     }
@@ -45,11 +45,11 @@
 
   50% {
     bottom: 50%;
-    transform: translateY(50%)rotate(0);
+    transform: translateY(50%) rotate(0);
   }
 
   100% {
     bottom: 50%;
-    transform: translateY(50%)rotate(-45deg);
+    transform: translateY(50%) rotate(-45deg);
   }
 }

@@ -1,11 +1,11 @@
 .burger {
   span {
     &:first-child {
-      animation: burger-first-default .4s forwards;
+      animation: burger-first-default 0.4s forwards;
     }
-  
+
     &:last-child {
-      animation: burger-second-default .4s forwards;
+      animation: burger-second-default 0.4s forwards;
     }
   }
 }
@@ -26,16 +26,16 @@
     transform: translateY(0) rotate(0);
   }
 }
-  
+
 @keyframes burger-second-default {
   0% {
     bottom: 50%;
-    transform: translateY(50%)rotate(-45deg);
+    transform: translateY(50%) rotate(-45deg);
   }
 
   50% {
     bottom: 50%;
-    transform: translateY(50%)rotate(0);
+    transform: translateY(50%) rotate(0);
   }
 
   100% {
