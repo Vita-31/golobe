@@ -8,7 +8,7 @@ export const HeaderLink: FC<Link> = ({ path, icon, name }) => {
     <li className="w-full md:w-fit">
       <NavLink
         to={path}
-        className="link link--active relative flex items-center justify-center gap-1 py-5 text-sm leading-4 text-dark"
+        className="link link--active relative flex items-center justify-center gap-1 py-8 text-sm leading-4 text-dark"
       >
         <svg className="icon">
           <use xlinkHref={`${sprites}#${icon}`}></use>

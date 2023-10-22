@@ -19,7 +19,7 @@
       position: absolute;
       width: 75%;
       height: 5px;
-      top: 100%;
+      bottom: 0;
       background-color: var(--primary);
       scale: 0;
       transition-property: scale;

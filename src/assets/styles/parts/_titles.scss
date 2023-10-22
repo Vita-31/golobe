@@ -1,0 +1,7 @@
+.title {
+  font-size: 36px;
+
+  @media (min-width: 768px) {
+    font-size: 45px;
+  }
+}

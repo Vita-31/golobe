@@ -10,7 +10,7 @@ export const Header: FC = () => {
 
   return (
     <header className={`header fixed inset-x-0 top-0 z-10 bg-white ${open ? 'open' : ''}`}>
-      <nav className="container flex items-center gap-3 py-4 md:justify-between md:py-5">
+      <nav className="container flex items-center gap-3 py-4 md:justify-between md:py-0">
         <ul className="nav pointer-events-none fixed left-4 right-4 top-32 flex items-center gap-8 rounded-md bg-white p-10 opacity-0 duration-500 md:pointer-events-auto md:static md:p-0 md:opacity-100 md:shadow-none">
           {links.map((link) => (
             <HeaderLink key={link.name} {...link} />
