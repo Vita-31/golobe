@@ -1,17 +1,18 @@
-import { Banner } from '@/shared/components/ui/Banner';
 import { FC } from 'react';
-import Bg from '@/assets/img/airplane.webp';
+import { Input } from '@/shared/components/ui/Input';
+import icon from '@/assets/img/sprites.svg';
 
-interface HomeFlightsProp {}
+interface HomeFlightsProps {}
 
-export const HomeFlights: FC<HomeFlightsProp> = () => {
+export const HomeFlights: FC<HomeFlightsProps> = () => {
   return (
-    <>
-      <Banner
-        title="Make your travel whishlist, we’ll do the rest"
-        text="Special offers to suit your plan"
-        img={Bg}
-      />
-    </>
+    <section className="reservation container absolute z-20">
+      <h2 className="flex flex-col gap-8 rounded-2xl bg-white px-6 pb-12 pt-8 text-xl font-semibold leading-6 text-dark">
+        Where are you flying?
+        <div className="flex gap-6">
+          <Input label="From - To" icon={`${icon}#arrow-swap`} iconPos="right" />
+        </div>
+      </h2>
+    </section>
   );
 };

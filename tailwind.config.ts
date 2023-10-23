@@ -8,6 +8,8 @@ export default <Config>{
         primary: '#8DD3BB',
         secondary: '#FF8682',
         dark: '#112211',
+        label: '#1C1B1F',
+        gray: '#79747E',
       },
     },
   },

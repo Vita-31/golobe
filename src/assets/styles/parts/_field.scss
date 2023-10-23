@@ -1,0 +1,11 @@
+.field {
+  input {
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + span {
+        top: -10px;
+        color: var(--primary);
+      }
+    }
+  }
+}
