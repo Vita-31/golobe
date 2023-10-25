@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import { Banner } from '@/shared/components/ui/Banner';
 import { HomeFlights } from './ui/HomeFlights';
+import { Map } from './ui/Map';
+import { BuyTrip } from './ui/BuyTrip';
 import Bg from '@/assets/img/airplane.webp';
 
 export const Home: FC = () => {
@@ -13,6 +15,8 @@ export const Home: FC = () => {
       />
 
       <HomeFlights />
+      <Map />
+      <BuyTrip />
     </>
   );
 };

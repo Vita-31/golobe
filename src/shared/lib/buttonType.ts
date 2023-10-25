@@ -15,8 +15,8 @@ const filledStyles: colorStylesProp = {
 };
 
 const outlineStyles: colorStylesProp = {
-  primary: 'text-primary border-primary rounded',
-  secondary: 'text-secondary border-secondary rounded',
+  primary: 'text-dark border-primary rounded',
+  secondary: 'text-dark border-secondary rounded',
   dark: 'text-dark border-dark rounded',
 };
 
