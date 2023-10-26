@@ -4,7 +4,7 @@ import { trips } from '../lib/constants';
 
 export const BuyTrip = () => {
   return (
-    <section className="">
+    <section className="buy-trip mb-20">
       <Content
         title="Fall into travel"
         text="Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination."
@@ -12,7 +12,7 @@ export const BuyTrip = () => {
         buttonLink="/buy-trip"
         className="mb-10"
       />
-      <div className="flex flex-wrap">
+      <div className="container grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {trips.map((trip) => (
           <Card key={trip.id} trip={trip} />
         ))}

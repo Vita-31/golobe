@@ -1,0 +1,26 @@
+.backpacking {
+  margin-bottom: 270px;
+
+  &__content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    border-radius: 20px;
+
+    @media (min-width: 640px) {
+      grid-template-columns: 1fr max-content;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 120%;
+
+      @media (min-width: 640px) {
+        max-width: 365px;
+      }
+    }
+  }
+
+  &-photo {
+    height: 200px;
+  }
+}
