@@ -12,6 +12,7 @@ export const inputIconStyle: inputIconStyleProp = (pos, icon) => {
       default:
         return 'py-4 px-4';
     }
+  } else {
+    return 'py-4 px-4';
   }
-  return '';
 };

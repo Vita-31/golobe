@@ -13,15 +13,15 @@ interface ContentProps {
 export const Content: FC<ContentProps> = ({ title, text, buttonText, buttonLink, className }) => {
   const navigate = useNavigate();
   return (
-    <div className={`container grid ${className ? className : 'mb-6'}`}>
-      <h2 className="title title--md column-start-1 column-end-2 row-start-1 row-end-2 mb-4 w-9/12 font-semibold leading-7 text-black">
+    <div className={`container md:grid ${className ? className : 'mb-6'}`}>
+      <h2 className="title title--md mb-4 font-semibold leading-7 text-black md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2 md:w-9/12">
         {title}
       </h2>
-      <p className="column-start-1 column-end-2 row-start-2 row-end-3 w-9/12 text-base font-normal leading-5 text-black">
+      <p className="mb-4 text-base font-normal leading-5 text-black md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-3 md:mb-0 md:w-9/12">
         {text}
       </p>
       <Button
-        className="column-start-2 colum-end-3 row-start-1 row-end-3 self-center"
+        className="w-full max-w-sm self-center md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3 md:w-fit md:max-w-fit"
         buttonType="outlined"
         buttonColor="primary"
         buttonSize="md"

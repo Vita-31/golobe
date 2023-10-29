@@ -6,7 +6,7 @@ import { footerNav } from './lib/constants';
 
 export const Footer: FC = () => {
   return (
-    <footer className="flex bg-primary text-dark">
+    <footer className="flex bg-primary pt-40 text-dark">
       <nav className="footer-container container grid gap-9 py-12 md:gap-6 md:py-16 xl:justify-between">
         <NavLink to="/">
           <img

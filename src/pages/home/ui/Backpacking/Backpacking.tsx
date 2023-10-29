@@ -7,7 +7,7 @@ interface BackpackingProp {}
 
 export const Backpacking: FC<BackpackingProp> = () => {
   return (
-    <div className="backpacking">
+    <section className="backpacking">
       <Content
         title="Fall into travel"
         text="Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination."
@@ -33,6 +33,6 @@ export const Backpacking: FC<BackpackingProp> = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

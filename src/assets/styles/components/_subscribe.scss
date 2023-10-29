@@ -1,0 +1,19 @@
+.subscribe {
+  bottom: -50%;
+  transform: translateY(50%);
+  border-radius: 20px;
+
+  &__content {
+    max-width: 595px;
+
+    .title {
+      max-width: 365px;
+    }
+  }
+
+  img {
+    width: 400px;
+    height: 305px;
+    margin-bottom: -24px;
+  }
+}

@@ -13,6 +13,7 @@ body {
     400 1rem/1.5 'Montserrat',
     sans-serif;
   color: #112211;
+  background-color: #fafbfc;
 }
 
 .container {
@@ -29,6 +30,7 @@ body {
 
 main {
   height: 100%;
+  position: relative;
 }
 
 svg path {
