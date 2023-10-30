@@ -1,11 +1,10 @@
 import { FC } from 'react';
-import { inputIconStyle } from '../../lib/inputIcon';
+import classNames from 'classnames';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   icon?: string;
   type?: string;
-  name?: string;
   borderColor?: string;
   iconPos?: 'right' | 'left' | 'left right';
 }
@@ -15,27 +14,32 @@ export const Input: FC<InputProps> = ({
   label,
   icon,
   iconPos,
-  type,
-  name,
   borderColor,
-  placeholder,
+  type,
   ...props
 }) => {
-  console.log(borderColor);
-  const inputIconPos = inputIconStyle(iconPos, icon);
-  const borderColorStyle = borderColor ? borderColor : 'border-gray';
-  const classes = [inputIconPos, borderColorStyle].filter(Boolean).join(' ');
   return (
-    <label className={`${className || ''} field relative block w-full`}>
+    <label
+      className={classNames('field relative block w-full', {
+        [className!]: className,
+      })}
+    >
       <input
         {...props}
-        placeholder={placeholder ? placeholder : ' '}
         type={type || 'text'}
-        name={name || ''}
-        className={`w-full rounded border border-solid bg-white text-base font-normal leading-5 duration-300 hover:border-primary focus:border-primary focus:outline-none ${classes}`}
+        className={classNames(
+          'w-full rounded border border-solid bg-white py-4 text-base font-normal leading-5 duration-300 hover:border-primary focus:border-primary focus:outline-none',
+          [borderColor || 'border-gray'],
+          {
+            'pl-12': iconPos?.includes('left'),
+            'pr-12': iconPos?.includes('right'),
+            'pl-4': iconPos === 'right',
+            'pr-4': iconPos === 'left',
+          },
+        )}
       />
       {label && (
-        <span className="text-lanel pointer-events-none absolute left-3 top-4 bg-white px-1 text-base font-normal leading-5 duration-300">
+        <span className="pointer-events-none absolute left-3 top-4 bg-white px-1 text-base font-normal leading-5 duration-300">
           {label}
         </span>
       )}

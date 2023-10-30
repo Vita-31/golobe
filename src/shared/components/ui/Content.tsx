@@ -1,4 +1,4 @@
-import { Button } from '@/shared/components/ui/Button';
+import { Button } from '@/shared/components/ui';
 import { FC } from 'react';
 import { useNavigate } from 'react-router';
 
@@ -22,9 +22,9 @@ export const Content: FC<ContentProps> = ({ title, text, buttonText, buttonLink,
       </p>
       <Button
         className="w-full max-w-sm self-center md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3 md:w-fit md:max-w-fit"
-        buttonType="outlined"
-        buttonColor="primary"
-        buttonSize="md"
+        variant="outlined"
+        color="primary"
+        size="md"
         onClick={() => navigate(buttonLink)}
       >
         {buttonText}

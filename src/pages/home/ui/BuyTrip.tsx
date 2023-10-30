@@ -1,5 +1,4 @@
-import { Content } from '@/shared/components/ui/Content';
-import { Card } from '@/shared/components/ui/Card';
+import { Content, Card } from '@/shared/components/ui';
 import { trips } from '../lib/constants';
 
 export const BuyTrip = () => {

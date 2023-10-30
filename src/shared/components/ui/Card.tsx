@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Button } from './Button';
+import { Button } from './button/Button';
 
 interface CardProp {
   trip: {
@@ -34,9 +34,9 @@ export const Card: FC<CardProp> = ({ trip }) => {
           {trip.cost}
         </span>
         <Button
-          buttonType="filled"
-          buttonColor="primary"
-          buttonSize="lg"
+          variant="filled"
+          color="primary"
+          size="lg"
           className="col-start-1 col-end-3 row-start-3 row-end-4"
         >
           {trip.buttonText}

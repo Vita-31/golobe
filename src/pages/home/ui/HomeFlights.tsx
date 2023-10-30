@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Input } from '@/shared/components/ui/Input';
+import { Input } from '@/shared/components/ui';
 import icon from '@/assets/img/sprites.svg';
 
 interface HomeFlightsProps {}

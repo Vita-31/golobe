@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import MapPhoto from '@/assets/img/map.webp';
-import { Content } from '@/shared/components/ui/Content';
+import { Content } from '@/shared/components/ui';
 
 interface Map {}
 

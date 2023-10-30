@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Button } from '@/shared/components/ui/Button';
+import { Button } from '@/shared/components/ui';
 
 interface BackpackingContentProp {}
 
@@ -20,9 +20,9 @@ export const BackpackingContent: FC<BackpackingContentProp> = () => {
         <span className="text-xl font-semibold leading-6">$700</span>
       </div>
       <Button
-        buttonSize="lg"
-        buttonType="outlined"
-        buttonColor="primary"
+        size="lg"
+        variant="outlined"
+        color="primary"
         className="mt-auto sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:row-end-4"
       >
         Book Flight

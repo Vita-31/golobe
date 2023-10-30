@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Content } from '@/shared/components/ui/Content';
+import { Content } from '@/shared/components/ui';
 import { backpackingPhotos } from '../../lib/constants';
 import { BackpackingContent } from './BackpackingContent';
 
@@ -17,8 +17,11 @@ export const Backpacking: FC<BackpackingProp> = () => {
       <div className="container grid grid-cols-1 grid-rows-1 gap-6 lg:grid-cols-2">
         <BackpackingContent />
         <div className="grid gap-x-5 gap-y-6 sm:grid-cols-2 sm:grid-rows-2">
-          {backpackingPhotos.map((photo) => (
-            <div className="overflow-hidden rounded-xl border-2 border-solid border-primary">
+          {backpackingPhotos.map((photo, index) => (
+            <div
+              className="overflow-hidden rounded-xl border-2 border-solid border-primary"
+              key={index}
+            >
               <img
                 src={photo.img}
                 alt="Backpacking Sri Lanka"

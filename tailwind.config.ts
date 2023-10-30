@@ -10,7 +10,7 @@ export default <Config>{
         dark: '#112211',
         label: '#1C1B1F',
         gray: '#79747E',
-        primaryLight: '#CDEAE1',
+        'primary-light': '#CDEAE1',
       },
     },
   },
