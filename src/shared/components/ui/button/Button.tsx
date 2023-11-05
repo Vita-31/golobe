@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import classNames from 'classnames';
+import sprites from '@/assets/img/sprites.svg';
 import { filledStyles, outlineStyles, flatStyles } from './lib/button-styles';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -7,6 +8,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   variant?: 'filled' | 'outlined' | 'flat';
   color?: 'primary' | 'secondary' | 'dark';
   size?: 'sm' | 'md' | 'lg';
+  icon?: string;
+  iconClassName?: string;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -15,13 +18,15 @@ export const Button: FC<ButtonProps> = ({
   color = 'primary',
   size,
   className,
+  icon,
+  iconClassName,
   ...props
 }) => {
   return (
     <button
       {...props}
       className={classNames(
-        'border border-solid px-4 text-sm font-medium leading-none duration-500',
+        'flex items-center gap-1 border border-solid px-4 text-sm font-medium leading-none duration-500',
         {
           'py-2': size === 'sm',
           'py-3': size === 'md',
@@ -33,6 +38,15 @@ export const Button: FC<ButtonProps> = ({
         },
       )}
     >
+      {icon && (
+        <svg
+          className={classNames('h-6 w-6', {
+            [iconClassName!]: iconClassName,
+          })}
+        >
+          <use xlinkHref={`${sprites}#${icon}`}></use>
+        </svg>
+      )}
       {children}
     </button>
   );

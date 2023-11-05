@@ -6,7 +6,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   icon?: string;
   type?: string;
   borderColor?: string;
-  iconPos?: 'right' | 'left' | 'left right';
+  iconPos?: 'right' | 'left';
 }
 
 export const Input: FC<InputProps> = ({
@@ -16,6 +16,7 @@ export const Input: FC<InputProps> = ({
   iconPos,
   borderColor,
   type,
+  placeholder,
   ...props
 }) => {
   return (
@@ -27,6 +28,7 @@ export const Input: FC<InputProps> = ({
       <input
         {...props}
         type={type || 'text'}
+        placeholder={placeholder || ' '}
         className={classNames(
           'w-full rounded border border-solid bg-white py-4 text-base font-normal leading-5 duration-300 hover:border-primary focus:border-primary focus:outline-none',
           [borderColor || 'border-gray'],
@@ -35,6 +37,7 @@ export const Input: FC<InputProps> = ({
             'pr-12': iconPos?.includes('right'),
             'pl-4': iconPos === 'right',
             'pr-4': iconPos === 'left',
+            'pl-4 pr-4': !iconPos,
           },
         )}
       />

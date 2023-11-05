@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { Banner } from '@/shared/components/ui/Banner';
+import { Banner } from './ui/Banner';
 import { HomeFlights } from './ui/HomeFlights';
 import { Map } from './ui/Map';
 import { BuyTrip } from './ui/BuyTrip';
-import { Backpacking } from './ui/Backpacking/Backpacking';
+import { Backpacking } from './ui/backpacking/Backpacking';
 import { Subscribe } from '@/shared/components/ui/Subscribe';
 import Bg from '@/assets/img/airplane.webp';
 

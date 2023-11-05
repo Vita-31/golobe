@@ -45,3 +45,10 @@ main {
   width: 24px;
   height: 24px;
 }
+
+input {
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}

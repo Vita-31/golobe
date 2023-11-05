@@ -16,7 +16,7 @@ export const outlineStyles: ButtonStyles = {
 };
 
 export const flatStyles: ButtonStyles = {
-  primary: 'text-primary bg-transparent',
-  secondary: 'text-secondary bg-transparent',
-  dark: 'text-dark bg-transparent',
+  primary: 'text-primary bg-transparent border-transparent px-0',
+  secondary: 'text-secondary bg-transparent border-transparent px-0',
+  dark: 'text-dark bg-transparent border-transparent px-0',
 };

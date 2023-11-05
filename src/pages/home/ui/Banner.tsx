@@ -8,7 +8,7 @@ interface BannerProp {
 
 export const Banner: FC<BannerProp> = ({ title, text, img }) => {
   return (
-    <section className="banner relative pb-32 pt-20">
+    <section className="banner relative mb-[400px] h-[538px] pb-32 pt-20 md:mb-[276px]">
       <img
         src={img}
         className="absolute bottom-0 left-0 right-0 top-0 h-full w-full"

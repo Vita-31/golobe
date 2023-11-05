@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Input } from './Input';
 import { Button } from './button/Button';
 import MailBox from '@/assets/img/mailbox.webp';
@@ -7,7 +7,7 @@ import MailBox from '@/assets/img/mailbox.webp';
 interface SubscribeProp {}
 
 export const Subscribe: FC<SubscribeProp> = () => {
-  const [email, setEmail] = useState('');
+  // const [email, setEmail] = useState('');
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -18,7 +18,7 @@ export const Subscribe: FC<SubscribeProp> = () => {
 
   return (
     <section className="container relative">
-      <div className="subscribe bg-primary-light absolute left-4 right-4 flex justify-between gap-10 p-6">
+      <div className="subscribe absolute left-4 right-4 flex justify-between gap-10 bg-primary-light p-6">
         <div className="subscribe__content">
           <h2 className="title mb-6 font-bold leading-tight">Subscribe Newsletter</h2>
           <h3 className="mb-2 text-xl font-bold leading-5">The Travel</h3>
@@ -33,7 +33,7 @@ export const Subscribe: FC<SubscribeProp> = () => {
                 type="email"
                 name="email"
                 borderColor="border-primary-light"
-                onChange={(e) => setEmail(e.target.value.trim())}
+                // onChange={(e) => setEmail(e.target.value.trim())}
               />
               <Button color="dark" size="lg" variant="filled">
                 Subscribe

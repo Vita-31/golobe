@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Content } from '@/shared/components/ui';
-import { backpackingPhotos } from '../../lib/constants';
+import { backpackingPhotos } from './lib/constants';
 import { BackpackingContent } from './BackpackingContent';
 
 interface BackpackingProp {}
