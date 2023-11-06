@@ -1,13 +1,11 @@
 import { FC } from 'react';
 import { Content } from '@/shared/components/ui';
-import { backpackingPhotos } from './lib/constants';
+import { backpackingPhotos } from '../lib/constants';
 import { BackpackingContent } from './BackpackingContent';
 
-interface BackpackingProp {}
-
-export const Backpacking: FC<BackpackingProp> = () => {
+export const Backpacking: FC = () => {
   return (
-    <section className="backpacking">
+    <section className="mb-[270px]">
       <Content
         title="Fall into travel"
         text="Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination."
@@ -26,7 +24,7 @@ export const Backpacking: FC<BackpackingProp> = () => {
                 src={photo.img}
                 alt="Backpacking Sri Lanka"
                 title="Backpacking Sri Lanka"
-                className="backpacking-photo h-full w-full object-cover"
+                className="h-[200px] w-full object-cover"
                 width="1"
                 height="1"
                 decoding="async"

@@ -3,7 +3,7 @@ import { Banner } from './ui/Banner';
 import { HomeFlights } from './ui/HomeFlights';
 import { Map } from './ui/Map';
 import { BuyTrip } from './ui/BuyTrip';
-import { Backpacking } from './ui/backpacking/Backpacking';
+import { Backpacking } from './ui/Backpacking';
 import { Subscribe } from '@/shared/components/ui/Subscribe';
 import Bg from '@/assets/img/airplane.webp';
 
