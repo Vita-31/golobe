@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { Content } from '@/shared/components/ui';
+import { SectionTitle } from '@/shared/components/ui';
 import { backpackingPhotos } from '../lib/constants';
 import { BackpackingContent } from './BackpackingContent';
 
 export const Backpacking: FC = () => {
   return (
     <section className="mb-[270px]">
-      <Content
+      <SectionTitle
         title="Fall into travel"
         text="Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination."
         buttonText="See All"

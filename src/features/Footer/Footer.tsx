@@ -7,18 +7,21 @@ import { footerNav } from './lib/constants';
 export const Footer: FC = () => {
   return (
     <footer className="flex bg-primary pt-40 text-dark">
-      <nav className="footer-container container grid gap-9 py-12 md:gap-6 md:py-16 xl:justify-between">
-        <NavLink to="/">
-          <img
-            src={Logo}
-            className="h-10 w-24 object-contain md:w-28"
-            alt="Golobe"
-            width="1"
-            height="1"
-          />
-        </NavLink>
+      <nav className="container flex flex-col gap-9 py-12 md:gap-6 md:py-16 lg:flex-row lg:justify-between">
+        <div className="flex flex-col gap-9 md:gap-6">
+          <NavLink to="/">
+            <img
+              src={Logo}
+              className="h-10 w-24 object-contain md:w-28"
+              alt="Golobe"
+              width="1"
+              height="1"
+            />
+          </NavLink>
+          <Social />
+        </div>
 
-        <div className="grid w-full gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-6 lg:grid-cols-5 xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-4">
+        <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-6 xl:max-w-[970px]">
           {footerNav.map((nav, idx) => (
             <div className="flex flex-col gap-4" key={idx}>
               <h2 className="text-base font-semibold leading-5">{nav.title}</h2>
@@ -33,10 +36,6 @@ export const Footer: FC = () => {
               </ul>
             </div>
           ))}
-        </div>
-
-        <div className="md:col-start-end-2 md:col-start-1 md:row-start-2 md:row-end-3">
-          <Social />
         </div>
       </nav>
     </footer>

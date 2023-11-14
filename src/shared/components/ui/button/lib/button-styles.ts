@@ -10,13 +10,13 @@ export const filledStyles: ButtonStyles = {
 };
 
 export const outlineStyles: ButtonStyles = {
-  primary: 'text-dark border-primary rounded bg-transparent',
-  secondary: 'text-dark border-secondary rounded bg-transparent',
-  dark: 'text-dark border-dark rounded bg-transparent',
+  primary: 'text-dark border-primary rounded',
+  secondary: 'text-dark border-secondary rounded',
+  dark: 'text-dark border-dark rounded',
 };
 
 export const flatStyles: ButtonStyles = {
-  primary: 'text-primary bg-transparent border-transparent px-0',
-  secondary: 'text-secondary bg-transparent border-transparent px-0',
-  dark: 'text-dark bg-transparent border-transparent px-0',
+  primary: 'text-primary border-transparent px-0',
+  secondary: 'text-secondary border-transparent px-0',
+  dark: 'text-dark border-transparent px-0',
 };

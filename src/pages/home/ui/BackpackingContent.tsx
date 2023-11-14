@@ -3,7 +3,7 @@ import { Button } from '@/shared/components/ui';
 
 export const BackpackingContent: FC = () => {
   return (
-    <div className="grid gap-x-2 gap-y-4 rounded-[20px] bg-primary p-4 text-dark sm:grid-cols-[1fr_max-content]">
+    <div className="grid gap-x-2 gap-y-4 rounded-[20px] bg-primary p-4 text-dark md:grid-cols-[1fr_max-content] md:grid-rows-[auto_1fr]">
       <h2 className="max-w-[365px] text-[40px] font-bold leading-10">Backpacking Sri Lanka</h2>
       <p className="text-sm leading-5 sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-3">
         Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of
@@ -15,7 +15,13 @@ export const BackpackingContent: FC = () => {
         <span className="text-sm leading-4">From</span>{' '}
         <span className="text-xl font-semibold leading-6">$700</span>
       </div>
-      <Button size="lg" variant="outlined" color="primary" className="mt-auto">
+      <Button
+        size="lg"
+        variant="outlined"
+        color="primary"
+        className="col-[span_2] mt-auto"
+        bg="white"
+      >
         Book Flight
       </Button>
     </div>

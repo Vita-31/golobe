@@ -1,21 +1,11 @@
 import { FC } from 'react';
-import { Input } from './Input';
-import { Button } from './button/Button';
+import { Input } from '../../../shared/components/ui/Input';
+import { Button } from '../../../shared/components/ui/button/Button';
 import MailBox from '@/assets/img/mailbox.webp';
-// import { ErrorMessage } from './ErrorMessage';
 
 interface SubscribeProp {}
 
 export const Subscribe: FC<SubscribeProp> = () => {
-  // const [email, setEmail] = useState('');
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(email);
-  // };
-
-  // const errorText = 'some error text';
-
   return (
     <section className="container relative">
       <div className="subscribe absolute left-4 right-4 flex justify-between gap-10 bg-primary-light p-6">
@@ -33,13 +23,11 @@ export const Subscribe: FC<SubscribeProp> = () => {
                 type="email"
                 name="email"
                 borderColor="border-primary-light"
-                // onChange={(e) => setEmail(e.target.value.trim())}
               />
-              <Button color="dark" size="lg" variant="filled">
+              <Button color="dark" size="lg" variant="filled" bg="dark">
                 Subscribe
               </Button>
             </div>
-            {/* <ErrorMessage text={errorText} /> */}
           </form>
         </div>
 

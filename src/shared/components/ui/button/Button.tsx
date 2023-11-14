@@ -8,6 +8,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   variant?: 'filled' | 'outlined' | 'flat';
   color?: 'primary' | 'secondary' | 'dark';
   size?: 'sm' | 'md' | 'lg';
+  bg?: 'white' | 'transparent' | 'dark' | 'primary' | 'secondary';
   icon?: string;
   iconClassName?: string;
 }
@@ -20,6 +21,7 @@ export const Button: FC<ButtonProps> = ({
   className,
   icon,
   iconClassName,
+  bg = 'transparent',
   ...props
 }) => {
   return (
@@ -35,6 +37,11 @@ export const Button: FC<ButtonProps> = ({
           [filledStyles[color]]: variant === 'filled',
           [outlineStyles[color]]: variant === 'outlined',
           [flatStyles[color]]: variant === 'flat',
+          'bg-white': bg === 'white',
+          'bg-transparent': bg === 'transparent',
+          'bg-dark': bg === 'dark',
+          'bg-primary': bg === 'primary',
+          'bg-secondary': bg === 'secondary',
         },
       )}
     >
