@@ -11,10 +11,14 @@
     }
   }
 
-  .nav {
-    pointer-events: initial;
-    top: 96px;
-    opacity: 1;
+  .header {
+    nav {
+      ul {
+        pointer-events: initial;
+        top: 96px;
+        opacity: 1;
+      }
+    }
   }
 }
 

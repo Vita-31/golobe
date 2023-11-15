@@ -8,9 +8,11 @@ interface SubscribeProp {}
 export const Subscribe: FC<SubscribeProp> = () => {
   return (
     <section className="container relative">
-      <div className="subscribe absolute left-4 right-4 flex justify-between gap-10 bg-primary-light p-6">
-        <div className="subscribe__content">
-          <h2 className="title mb-6 font-bold leading-tight">Subscribe Newsletter</h2>
+      <div className="absolute bottom-[-50%] left-4 right-4 flex translate-y-[50%] justify-between gap-10 rounded-[20px] bg-primary-light p-6">
+        <div className="max-w-[595px]">
+          <h2 className="mb-6 max-w-[365px] text-[45px] font-bold leading-tight">
+            Subscribe Newsletter
+          </h2>
           <h3 className="mb-2 text-xl font-bold leading-5">The Travel</h3>
           <p className="mb-4 font-medium leading-5 opacity-70">
             Get inspired! Receive travel discounts, tips and behind the scenes stories.
@@ -39,7 +41,7 @@ export const Subscribe: FC<SubscribeProp> = () => {
           height="1"
           decoding="async"
           loading="lazy"
-          className="hidden lg:block"
+          className="mb-[-24px] hidden h-[305px] w-[400px] lg:block"
         />
       </div>
     </section>

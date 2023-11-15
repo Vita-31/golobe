@@ -7,7 +7,7 @@ interface HomeFlightsProps {}
 
 export const HomeFlights: FC<HomeFlightsProps> = () => {
   return (
-    <section className="reservation container absolute top-[450px] z-20">
+    <section className="container absolute left-[50%] top-[450px] z-20 translate-x-[-50%]">
       <div className="flex flex-col gap-6 rounded-2xl bg-white px-6 pb-12 pt-8 md:gap-8 ">
         <h2 className="text-xl font-semibold leading-6 text-dark">Where are you flying?</h2>
         <div className="flex flex-col gap-4 md:flex-row md:gap-6">
