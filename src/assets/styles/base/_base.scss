@@ -23,22 +23,9 @@ body {
   margin-inline: auto;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
 main {
   height: 100%;
   position: relative;
-}
-
-svg path {
-  fill: currentColor;
-}
-
-main {
-  margin-top: 88px;
 }
 
 .icon {

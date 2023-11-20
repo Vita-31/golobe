@@ -1,18 +1,18 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import classNames from 'classnames';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  icon?: string;
   type?: string;
   borderColor?: string;
   iconPos?: 'right' | 'left';
+  right?: ReactNode;
 }
 
 export const Input: FC<InputProps> = ({
   className,
   label,
-  icon,
+  right,
   iconPos,
   borderColor,
   type,
@@ -46,11 +46,7 @@ export const Input: FC<InputProps> = ({
           {label}
         </span>
       )}
-      {icon && (
-        <svg className="absolute right-3 top-4 h-6 w-6 text-black">
-          <use xlinkHref={icon}></use>
-        </svg>
-      )}
+      {right}
     </label>
   );
 };

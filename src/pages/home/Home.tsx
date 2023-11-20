@@ -5,7 +5,7 @@ import { Map } from './ui/Map';
 import { BuyTrip } from './ui/BuyTrip';
 import { Backpacking } from './ui/Backpacking';
 import { Subscribe } from './ui/Subscribe';
-import Bg from '@/assets/img/airplane.webp';
+import Bg from '@/assets/img/plane.jpg';
 
 export const Home: FC = () => {
   return (
@@ -15,8 +15,7 @@ export const Home: FC = () => {
         text="Special offers to suit your plan"
         img={Bg}
       />
-
-      <HomeFlights />
+      <HomeFlights className="relative z-20 translate-y-[-50%]" />
       <Map />
       <BuyTrip />
       <Backpacking />

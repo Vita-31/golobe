@@ -1,17 +1,20 @@
 import { FC } from 'react';
-import { Button, Input } from '@/shared/components/ui';
+import classNames from 'classnames';
+import { Button, Icon, Input } from '@/shared/components/ui';
 // import { RangeDatePicker } from '@/shared/components/ui/RangeDatePicker';
 import icon from '@/assets/img/sprites.svg';
 
-interface HomeFlightsProps {}
+interface HomeFlightsProps {
+  className?: string;
+}
 
-export const HomeFlights: FC<HomeFlightsProps> = () => {
+export const HomeFlights: FC<HomeFlightsProps> = ({ className }) => {
   return (
-    <section className="container absolute left-[50%] top-[450px] z-20 translate-x-[-50%]">
-      <div className="flex flex-col gap-6 rounded-2xl bg-white px-6 pb-12 pt-8 md:gap-8 ">
+    <section className={classNames('container', className)}>
+      <div className="flex flex-col gap-6 rounded-2xl bg-white px-6 pb-12 pt-8 shadow-light md:gap-8 ">
         <h2 className="text-xl font-semibold leading-6 text-dark">Where are you flying?</h2>
         <div className="flex flex-col gap-4 md:flex-row md:gap-6">
-          <Input label="From - To" icon={`${icon}#arrow-swap`} iconPos="right" />
+          <Input label="From - To" right={<Icon name={icon} />} />
           {/* <RangeDatePicker /> */}
           <Input label="Passenger - Class" value="1 Passenger, Economy" />
         </div>
