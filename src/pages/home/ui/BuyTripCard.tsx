@@ -31,7 +31,7 @@ export const BuyTripCard: FC<BuyTripCardProp> = ({ trip }) => {
           </div>
           <span className="text-2xl font-semibold leading-7">{trip.cost}</span>
         </div>
-        <Button variant="filled" color="primary" size="lg" className="w-full">
+        <Button variant="filled" color="primary" bg="primary" size="lg" className="w-full">
           {trip.buttonText}
         </Button>
       </div>

@@ -28,7 +28,7 @@ export const Button: FC<ButtonProps> = ({
     <button
       {...props}
       className={classNames(
-        'flex items-center justify-center gap-1 border border-solid px-4 text-sm font-medium leading-none duration-500',
+        'flex items-center justify-center gap-1 border border-solid px-4 text-sm font-medium leading-none duration-500 disabled:cursor-not-allowed',
         {
           'py-2': size === 'sm',
           'py-3': size === 'md',
@@ -47,7 +47,7 @@ export const Button: FC<ButtonProps> = ({
     >
       {icon && (
         <svg
-          className={classNames('h-6 w-6', {
+          className={classNames('h-6 w-6 duration-0', {
             [iconClassName!]: iconClassName,
           })}
         >

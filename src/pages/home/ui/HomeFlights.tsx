@@ -33,6 +33,7 @@ export const HomeFlights: FC<HomeFlightsProps> = ({ className }) => {
             variant="filled"
             color="primary"
             size="lg"
+            bg="primary"
             icon="paper-plane"
             className="justify-center"
             iconClassName="w-4 h-4"

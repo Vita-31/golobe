@@ -38,7 +38,6 @@ export const Header: FC = () => {
               text-white
               duration-300
               hover:bg-primary
-              hover:text-dark
               md:px-6
               md:py-4
             "
