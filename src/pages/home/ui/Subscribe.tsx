@@ -8,7 +8,7 @@ interface SubscribeProp {}
 export const Subscribe: FC<SubscribeProp> = () => {
   return (
     <section className="container relative">
-      <div className="absolute bottom-[-50%] left-4 right-4 flex translate-y-[50%] justify-between gap-10 rounded-[20px] bg-primary-light p-6">
+      <div className="absolute bottom-[-50%] left-4 right-4 flex translate-y-[50%] justify-between gap-10 rounded-[20px] bg-primary-lighter p-6">
         <div className="max-w-[595px]">
           <h2 className="mb-6 max-w-[365px] text-[45px] font-bold leading-tight">
             Subscribe Newsletter
@@ -24,9 +24,9 @@ export const Subscribe: FC<SubscribeProp> = () => {
                 className="border-white"
                 type="email"
                 name="email"
-                borderColor="border-primary-light"
+                borderColor="border-primary-lighter"
               />
-              <Button color="dark" size="lg" variant="filled" bg="dark">
+              <Button color="dark" size="lg" variant="filled">
                 Subscribe
               </Button>
             </div>

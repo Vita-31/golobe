@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import classNames from 'classnames';
 import sprites from '@/assets/img/sprites.svg';
-import { filledStyles, outlineStyles, flatStyles } from './lib/button-styles';
+import { filledStyles, outlineStyles, linkStyles } from './lib/button-styles';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: 'filled' | 'outlined' | 'flat';
-  color?: 'primary' | 'secondary' | 'dark';
+  variant?: 'filled' | 'outlined' | 'link';
+  color?: 'primary' | 'secondary' | 'dark' | 'light';
   size?: 'sm' | 'md' | 'lg';
   bg?: 'white' | 'transparent' | 'dark' | 'primary' | 'secondary';
   icon?: string;
@@ -21,7 +21,6 @@ export const Button: FC<ButtonProps> = ({
   className,
   icon,
   iconClassName,
-  bg = 'transparent',
   ...props
 }) => {
   return (
@@ -36,12 +35,7 @@ export const Button: FC<ButtonProps> = ({
           [className!]: className,
           [filledStyles[color]]: variant === 'filled',
           [outlineStyles[color]]: variant === 'outlined',
-          [flatStyles[color]]: variant === 'flat',
-          'bg-white': bg === 'white',
-          'bg-transparent': bg === 'transparent',
-          'bg-dark': bg === 'dark',
-          'bg-primary': bg === 'primary',
-          'bg-secondary': bg === 'secondary',
+          [linkStyles[color]]: variant === 'link',
         },
       )}
     >

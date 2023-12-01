@@ -2,22 +2,26 @@ import { ButtonProps } from '../Button';
 
 type ButtonStyles = { [key in NonNullable<ButtonProps['color']>]: string };
 
+const base = 'border-2 rounded';
+const focusBase = 'focus:ring-2 focus:ring-offset-2';
+const focusPrimary = `${focusBase} focus:ring-primary`;
+const focusSecondary = `${focusBase} focus:ring-secondary`;
+const focusDark = `${focusBase} focus:ring-dark`;
+
 export const filledStyles: ButtonStyles = {
-  primary:
-    'bg-primary text-dark border-primary rounded hover:bg-[#9BE0C8] hover:border-[#9BE0C8] active:bg-[#82CBB2] active:border-[#9BE0C8] active:rounded-none disabled:bg-[#D2D1D3] disabled:border-[#D2D1D3] disabled:text-[#8F8C91] focus:outline-primary focus:border-white outline-transparent outline outline-1',
-  secondary: 'bg-secondary text-dark border-secondary rounded',
-  dark: 'bg-dark text-white border-dark rounded hover:bg-primary hover:border-primary',
+  primary: `${base} bg-primary text-dark border-transparent hover:bg-primary-light active:bg-primary-dark disabled:bg-gray-lighter disabled:text-gray-light ${focusPrimary}`,
+  secondary: `${base} bg-secondary text-dark border-secondary ${focusSecondary}`,
+  dark: `${base} bg-dark text-white border-dark hover:bg-primary ${focusDark}`,
 };
 
 export const outlineStyles: ButtonStyles = {
-  primary:
-    'text-dark border-primary rounded hover:border-[#9BE0C8] focus:border-2 active:border-[#82CBB2] disabled:border-[#D2D1D3] disabled:text-[#8F8C91]',
-  secondary: 'text-dark border-secondary rounded',
-  dark: 'text-dark border-dark rounded',
+  primary: `${base} text-dark border-primary hover:border-primary-light active:border-primary-dark disabled:border-gray-lighter disabled:text-gray-light ${focusPrimary}`,
+  secondary: `${base} text-dark border-secondary ${focusSecondary}`,
+  dark: `${base} text-dark border-dark ${focusDark}`,
 };
 
-export const flatStyles: ButtonStyles = {
-  primary: 'text-primary border-transparent px-0',
-  secondary: 'text-secondary border-transparent px-0',
-  dark: 'text-dark border-transparent px-0 hover:text-[#9BE0C8] disabled:text-[#8F8C91] active:text-[#82CBB2]',
+export const linkStyles: ButtonStyles = {
+  primary: `${base} text-primary border-transparent outline-none`,
+  secondary: `${base} text-secondary border-transparent outline-none`,
+  dark: `${base} text-dark border-transparent hover:text-primary-light disabled:text-gray-light active:text-primary-dark outline-none`,
 };

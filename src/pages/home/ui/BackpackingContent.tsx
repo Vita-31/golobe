@@ -15,13 +15,7 @@ export const BackpackingContent: FC = () => {
         <span className="text-sm leading-4">From</span>{' '}
         <span className="text-xl font-semibold leading-6">$700</span>
       </div>
-      <Button
-        size="lg"
-        variant="outlined"
-        color="primary"
-        className="col-[span_2] mt-auto"
-        bg="white"
-      >
+      <Button size="lg" variant="outlined" color="primary" className="col-[span_2] mt-auto">
         Book Flight
       </Button>
     </div>
